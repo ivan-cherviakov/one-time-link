@@ -33,13 +33,11 @@ $ pnpm run start:prod
 
 ```bash
 # unit tests
-$ pnpm run test
+$ pnpm t
 
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
+# integration tests
+# don't forget to run docker-compose
+$ pnpm run test:integratino
 ```
 
 ## License
