@@ -1,7 +1,7 @@
 services:
   mongo:
     image: mongo:6.0.14
-    healthcheck: 
-      test: echo 'db.runCommand("ping").ok' | mongosh "mongodb://127.0.0.27017 --quiet"
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh "mongodb://127.0.0.1:27017" --quiet
     ports:
-      - 27017:27017
+    - 27017:27017
