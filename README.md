@@ -10,6 +10,15 @@ Requirements:
 * code should be deployed on github
 * any way of storing data can be used
 
+Notes:
+* mongodb - just most convenient to work with for me, also mongo follows ACID
+* we not store full URL, backend wise only token relevant, also storing full URL make data migration to different URL harder
+* added unique index on token
+* added unique partial index for content when is\_actvie: true
+* mongodb errors will be thrown as Internal Server Error, might add error filter to return corresponding 400 errors
+* if user create link but later forget the token, he cannot create new one unless current one used
+* renamed e2e to integration because e2e are tests where interactions happens in browser
+
 ## Installation
 
 ```bash
