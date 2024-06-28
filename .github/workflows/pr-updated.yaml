@@ -19,5 +19,5 @@ jobs:
         name: build
       - run: pnpm lint
         name: lint
-      - run pnpm t
+      - run: pnpm t
         name: test
