@@ -15,9 +15,11 @@ Notes:
 * we not store full URL, backend wise only token relevant, also storing full URL make data migration to different URL harder
 * added unique index on token
 * added unique partial index for content when is\_actvie: true
-* mongodb errors will be thrown as Internal Server Error, might add error filter to return corresponding 400 errors
+* mongodb errors will be thrown as Internal Server Error, might want to add error filter to return corresponding handled http errors
 * if user create link but later forget the token, he cannot create new one unless current one used
 * renamed e2e to integration because e2e are tests where interactions happens in browser
+* added gh actions for lint and test checks
+* added dockerfile to be release ready to k8s
 
 ## Installation
 
